@@ -16,7 +16,11 @@ def is_prime(number):
 
     return True
 
-# Test the function with a range of numbers
+# Test the function with a range of numbers and format the output in two columns
 for num in range(3, 101):
     if is_prime(num):
-        print(f"{num} is prime.")
+        print(f"{num:2} is prime", end="\t")
+    else:
+        print(f"{num:2} is not prime", end="\t")
+    if (num - 2) % 2 == 0:
+        print()  # Start a new row after printing 2 numbers
